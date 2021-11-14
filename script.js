@@ -18,6 +18,7 @@ let addMovie = (movie) => {
 //print out to console in a correct format
 //print out the total number of movies in allMovies array
 let printMovies = () => {
+    console.log("Printing all movies....\n");
     for(i = 0; i < allMovies.length; i++) {
         console.log(allMovies[i].title + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].haveWatched);
     }
@@ -28,6 +29,7 @@ let printMovies = () => {
 //print out to console, only the movies that has a rating higher than rating(argument)
 //print out the total number of matches
 let highRatings = (rating) => {
+    console.log("Printing movie that has a rating higher than " + rating);
     let num = 0;
     for(i = 0; i < allMovies.length; i++) {
         if (allMovies[i].rating > rating) {
@@ -41,6 +43,7 @@ let highRatings = (rating) => {
 
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
+    console.log("changing the status of the movie...");
     for (movie of allMovies) {
         if (movie.title == title) {
             if (movie.haveWatched == true) {
